@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header
+        {
+            background-color: yellow;
+            border:5px solid black;
+            height: 3vmax;
+            color: blue;
+        }
+        #footer
+        {
+            background-color: yellow;
+            border:5px solid black;
+            height: 2vmax;
+            color: blue;
+        }
+        .container .box
+        {
+            display: flex;
+            flex-direction: row;
+        }
+        .container .box .box1
+        {
+            background-color: yellow;
+            width: 40vmin;
+            height: 38vmax;
+            border: black 5px solid;
+        }
+        .container .box .box2
+        {
+            background-color: silver;
+            margin-left: 19px;
+            border:black 5px solid;
+            width: 600vmin;
+        }
+        #nav_buttons
+        {
+            margin-top: 2.9vmax;
+            margin-left: 2.9vmax;
+            margin-right: 2.9vmax;
+            height: 6vmax;
+            background-color: yellow;
+            color:blue;
+            border:solid black 5px;
+        }
+        
+        #nav_buttons span{
+            background-color: aqua;
+            margin-left: 10vmax;
+            margin-top: 1vmax;
+            width: 8vmax;
+            border-radius: 15px;
+            display: inline-block;
+            border:black solid 4px;
+            border-style: outset;
+        }
+       
+        #mapss
+        {
+            background-color: aqua;
+            border:black solid 6px;
+            margin-top:8px;
+            margin-left: 40px;
+            margin-right: 35px;
+            height: 25vmax;
+            text-align:center;
+        }
+        #mapss p{
+            margin-top: 10vmax;
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <p id="header">Header</p>
+    <div class="container">
+        <div class="box">
+            <div class="box1">
+                Container
+            </div>
+            <div class="box2">
+                <div id="nav_buttons">
+                    <span>Tool1</span>
+                    <span>Tool2</span>
+                    <span>Tool3</span>
+                    nav bar with buttons
+                </div>   
+                <div id="mapss">
+                    <p>map(through mapstraction if that matters)</p>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <p id="footer">Footer</p>
+</body>
+</html>
