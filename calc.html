@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+        }
+        .calc_box
+        {
+            margin-left: 36vmax;
+            margin-top: 10vmax;
+            margin-bottom: 10vmax;
+            background-color: rgb(246, 138, 156);
+            height:32vmax;
+            width:30vmax;
+            padding: 2vmax;
+        }
+        #input_calc
+        {
+            margin-left: 10vmax;
+            height: 2vmax; 
+        }
+        .first_row,.second_row,.third_row,.forth_row,.fifth_row{
+            padding: 2vmax;
+            border-left: 2vmax;
+        }
+        .button
+        {
+            margin-left: 4vmax; 
+            text-decoration: solid; 
+            font-size: 2vmax;
+            width: 30px;
+            border-radius: 2px 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calc_box">
+        <input type="text" id="input_calc"/>
+        <div class="first_row">
+            <button class="button" value="7" onclick="input_calc.value+='7'">7</button>
+            <button class="button" value="8" onclick="input_calc
+            .value+='8'">8</button>
+            <button class="button" value="9" onclick="input_calc
+            .value+='9'">9</button>
+            <button class="button" value="9" onclick="input_calc
+            .value+='+'">+</button>
+        </div>
+        <div class="second_row">
+            <button class="button" value="4" onclick="input_calc
+            .value+='4'">4</button>
+            <button class="button" value="5" onclick="input_calc
+            .value+='5'">5</button>
+            <button class="button" value="6" onclick="input_calc
+            .value+='6'">6</button>
+            <button class="button" value="-" onclick="input_calc
+            .value+='-'">-</button>
+        </div>
+        <div class="third_row">
+            <button class="button" value="1" onclick="input_calc
+            .value+='1'">1</button>
+            <button class="button" value="2" onclick="input_calc
+            .value+='2'">2</button>
+            <button class="button" value="3" onclick="input_calc
+            .value+='3'">3</button>
+            <button class="button" value="*" onclick="input_calc
+            .value+='*'">*</button>
+        </div>
+        <div class="forth_row">
+            <button class="button" value="0" onclick="input_calc
+            .value+='0'">0</button>
+            <button class="button" value="%" onclick="input_calc
+            .value+='%'">%</button>
+            <button class="button" value="." onclick="input_calc
+            .value+='.'">.</button>
+            <button class="button" value="/" onclick="input_calc
+            .value+='/'">/</button>
+        </div>
+        <div class="fifth_row">
+            <button class="button" value="=" onclick="input_calc.value = eval(input_calc.value) ">=</button>  
+            <button class="button" value="c" onclick="input_calc.value = ' ' ">C</button>
+        </div>    
+    </div>
+</body>
+</html>
