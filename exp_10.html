@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .in
+        {
+            background-color: rgb(247, 186, 206);
+            height: 27vmax;
+            width: 20vmax;
+
+            margin-left: 38vmax;
+            margin-top: 4vmax;;
+            margin-bottom: 4vmax;
+        }
+        #b1
+        {
+            margin-left: 7vmax;
+            margin-top: 2vmax;
+        }
+        #b2
+        {
+            margin-left: 7vmax;
+            margin-top: 2vmax;
+
+        }
+        #b3,#haha
+        {
+            margin-left: 6vmax;
+            margin-top: 2vmax;
+        }
+        #b4
+        {
+            margin-left: 6vmax;
+        }
+        #b5,#b6,#b7
+        {
+            margin-top: 2vmax;
+            margin-left: 6vmax;
+        }
+        
+    </style>    
+</head>
+<body>
+    <div class="in">
+       <button  id="b1" onclick="alert('Kyu kya kare ga puch krr')">hii how are you</button>
+       <button id="b2"  onclick="alert('tumse mtlb')">Example of alert  </button>
+       <button id="b3" onclick="handshake()">Handshake with me</button>
+       <p id="haha"></p>
+       <button id="b4">Click me to confirm </button>
+       <button id="b5" onclick="windowOpen()">Open Any website</button>
+       <button id="b6" onclick="windowClose()">Close this website</button>
+       <button id="b7" onclick="window.print()">Example of print</button>
+    </div>    
+
+    <script>
+        function handshake()
+        {
+            var doc=prompt("Please enter your name ","Doremon")
+            if(doc!=null)
+            {
+                document.getElementById('haha').innerHTML="have to meet you "+doc;
+            }
+        }
+        var el=document.getElementById(b4);
+        b4.onclick=function()
+        {
+            confirm("Press Ok to close this prompt");
+        }
+
+        function windowOpen()
+        {
+            Window=window.open("https://www.geeksforgeeks.org/","_blank","width=400,height=300,top=230,left=540");
+        }
+        function windowClose()
+        {
+            Window.close();
+        }
+
+    </script>
+</body>
+</html>
