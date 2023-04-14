@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Javascript Date</p>
+    <script>
+        var today=new Date();
+        console.log(today);
+        var day=today.getDate();
+        console.log(day);
+        var month=today.getMonth();
+        console.log(month);
+        var year=today.getFullYear();
+        console.log(year);
+        month =(month<=9)?'0'+month:month;
+        day=(day<=9)?'0'+day:day;
+        console.log(month+"-"+day+"-"+year);
+        console.log(month+"/"+day+"/"+year);
+        console.log(day+"-"+month+"-"+year);
+        console.log(day+"/"+month+"/"+year);
+    </script>
+</body>
+</html>

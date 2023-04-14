@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Begninning of the year</p>
+    <script>
+        function day_passed(dt)
+        {
+            var today=new Date(dt.getTime());
+            var prev=new Date(dt.getFullYear(),0,1);
+            //console.log(prev);
+            return Math.ceil((today-prev+1)/86400000);
+        }
+        console.log(day_passed(new Date(2023,5,14)));
+    </script>
+</body>
+</html>

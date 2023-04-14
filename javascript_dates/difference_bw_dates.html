@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Difference between Dates</p>
+    <script>
+        var date1 = new Date("06/14/2023");
+        var date2 = new Date("06/15/2023"); 
+
+        var Difference_In_Time = date2.getTime() - date1.getTime();
+        var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
+        console.log("Total number of days between "+date1+" and "+date2+" is : "+Difference_In_Days);
+    </script>
+</body>
+</html>
