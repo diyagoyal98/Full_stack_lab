@@ -1,0 +1,28 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h1>Reverse a string in javascrpt</h1>
+        <button id="b1" >hii just click me if you want to enter a string</button>
+        <p id="pg"></p>
+        <script>
+            var b=document.getElementById('b1');
+            b.onclick=function()
+            {
+                var doc=prompt("enter your string" ,"diya");
+                var ans="";
+                if(doc!=null)
+                {   
+                    var le=doc.length;
+                    for(var i=le-1;i>=0;i--)
+                    {
+                        ans+=doc[i];
+                    }
+                    document.getElementById('pg').innerHTML="hiii "+doc+le+ans;
+                    console.log(ans);
+                }
+            }
+        </script>
+    </body>
+</html>
