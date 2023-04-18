@@ -1,0 +1,29 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Binary to decimal</h1>
+        <button id="b1">click me to enter the string you want to convert</button>
+        <p id="haha"></p>
+
+        <script>
+            var b=document.getElementById('b1');
+            b.onclick=function()
+            {
+                var doc=prompt("Entr the string","0001");
+                document.getElementById('haha').innerHTML="hiii"+doc;
+                var le=doc.length;
+                var ans=0;
+                var po=0;
+                for(var i=le-1;i>=0;i--)
+                {
+                    var n=parseInt(doc[i]);
+                    ans+=n*Math.pow(2,po);
+                    po++;
+                }
+                console.log(ans);
+            }
+        </script>
+    </body>
+</html>
