@@ -1,0 +1,31 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <p>Remove vowels from the string</p>
+        <button id="b1">Click me if you want to give input string</button>
+        <p id="haha">Answer = </p>
+
+        <script>
+            var bu=document.getElementById('b1');
+            bu.onclick=function()
+            {
+                var doc=prompt("Enter the string","aeioudiya");
+                
+
+                var le=doc.length;
+                var ans="";
+                for(var i=0;i<le;i++)
+                {
+                    if(doc[i]=='a' || doc[i]=='e' || doc[i]=='i' || doc[i]=='o' || doc[i]=='u')
+                    continue;
+                    else
+                    ans+=doc[i];
+                }
+                document.getElementById('haha').innerHTML=ans;
+            }
+
+        </script>
+    </body>
+</html>
