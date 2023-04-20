@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+
+    <script>
+        function Calendar() {
+            var month = document.getElementById("month").value;
+            let year = document.getElementById("year").value;
+            let date = new Date(year, month-1, 1);
+            var daysInMonth = new Date(year, month, 0).getDate();
+
+            var calendar = "<table><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr><tr>";
+            for (var i = 0; i < date.getDay(); i++) {
+                calendar += "<td></td>";
+            }
+            for (var i = 1; i <= daysInMonth; i++) {
+                calendar += "<td>" + i + "</td>";
+                if ((i + date.getDay()) % 7 == 0) {
+                    calendar += "</tr><tr>";
+                }
+            }
+            for (var i = date.getDay() + daysInMonth; i % 7 != 0; i++) {
+                calendar += "<td></td>";
+            }
+            calendar += "</tr></table>";
+            document.getElementById("calendar").innerHTML = calendar;
+
+        }
+
+    </script>
+
+    Select Year
+    <select id="year"></select>
+    <script>
+        let options = document.getElementById('year')
+        let yearList = new Date().getFullYear();
+        while (yearList >= 1900) {
+            let option = document.createElement('option')
+            option.text = yearList;
+            option.value = yearList;
+            options.add(option);
+            yearList -= 1;
+        }
+
+    </script>
+
+    Select Month
+    <select id="month">
+        <option value="1">January</option>
+        <option value="2">February</option>
+        <option value="3">March</option>
+        <option value="4">April</option>
+        <option value="5">May</option>
+        <option value="6">June</option>
+        <option value="7">July</option>
+        <option value="8">August</option>
+        <option value="9">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+    </select>
+
+    <button onclick="Calendar()">View Calendar</button>
+    <div id="calendar"></div>
+
+
+</body>
+
+</html>
